@@ -137,120 +137,120 @@ El sistema operativo de los clientes puede ser tanto Windows, Linux, MacOS, Andr
 
 ## 4. Requisitos
 
-## R1 - Conexión a internet
+### R1 - Conexión a internet
 Los usuarios y agentes necesitan una conexión a internet activa.
 #### Priodidad: Fundamental
 #### Justificación
 Para poder enviar, recibir y visualizar datos de la plataforma es necesario tener una conexión a internet activa.
 
-## R1.1 - Navegador web moderno
+### R1.1 - Navegador web moderno
 Navegador con soporte HTML5, CSS, JavaScript, subida de archvios y preferiblemente geolocalización.
-### Prioridad: Fundamental
-### Justificación
+#### Prioridad: Fundamental
+#### Justificación
 Es necesario un navegador que cargue correctamente la página y que permita subir imágenes para poder utilizar la plataforma.
 
-## R2 - Crear una cuenta de usuario
+### R2 - Crear una cuenta de usuario
 Los usuarios podrán crear una cuenta ingresando nombre, email y contraseña. Alternativamente podrán hacerlo con su cuenta de Google.
-### Prioridad: Fundamental
-### Dependencias: R1
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1
+#### Justificación
 Los usuarios necesitaran una cuenta para poder crear y ver sus tickets.
 
-## R3 - Crear una cuenta de agente
+### R3 - Crear una cuenta de agente
 La creación de la cuenta de un agente depende del acuerdo con una entidad (por ejemplo el Ayuntamiento), por lo que su creación debe ser llevada acabo por los administradores de la plataforma.
-### Prioridad: Fundamental
-### Dependencias: R1
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1
+#### Justificación
 Los agentes necesitan tener una cuenta para poder ver y cerrar tickets.
 
-## R4 - Inicio de sesión
-### Prioridad: Fundamental
-### Dependencias: R1, R2, R3
-### Justificación
+### R4 - Inicio de sesión
+#### Prioridad: Fundamental
+#### Dependencias: R1, R2, R3
+#### Justificación
 Tanto los usuarios como los agentes deben iniciar sesión para utilizar la plataforma.
 
-## R5 - Crear ticket
+### R5 - Crear ticket
 Los usuarios podrán crear tickets de incidencias. El usuario proporcionara una descripción, imagenes y ubicacion de la incidencia.
-### Prioridad: Fundamental
-### Dependencias: R1, R4
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4
+#### Justificación
 El objetivo de la plataforma es que los usuarios creen tickets para reportar incidencias, por lo que debe haber un mecanismo que habilite la creacion de tickets.
 
-## R5.1 - Crear subticket
+### R5.1 - Crear subticket
 En caso de que exista un ticket similar previamente reportado (por proximidad geográfica), se pedira al usuario que confirme si efectivamente la incidencia ha sido reportada previamente. En caso afirmativo, el ticket se adjuntará como subticket al ticket principal.
-### Prioridad: Fundamental
-### Dependencias: R1, R4, R5
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4, R5
+#### Justificación
 Evitar que haya duplicados en el sistema para facilitar a los agentes la labor de revisar y cerrar tickets.
 
-## R5.2 - Descripción de un ticket
+### R5.2 - Descripción de un ticket
 La descripción tendrá un tamaño máximo de 240 caracteres.
-### Prioridad: Fundamental
-### Dependencias: R1, R4, R5
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4, R5
+#### Justificación
 Reducir el tamaño máximo que puede tener un ticket.
 
-## R5.3 - Imagenes de un ticket
+### R5.3 - Imagenes de un ticket
 Un ticket contará con entre 1 y 3 imagenes, en formato png o jpg y de no mas de 15mb
-### Prioridad: Fundamental
-### Dependencias: R1, R4, R5
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4, R5
+#### Justificación
 Reducir el tamaño máximo que puede tener un ticket.
 
-## R5.4 - Ubicación de un ticket
+### R5.4 - Ubicación de un ticket
 La ubicación de un ticket vendrá dada por el GPS del dispositivo en caso de estar usando un móvil, o de una API de terceros en caso contrario o si el GPS no esta disponible.
-### Prioridad: Deseable
-### Dependencias: R1, R4, R5
-### Justificación
+#### Prioridad: Deseable
+#### Dependencias: R1, R4, R5
+#### Justificación
 Indicar a los agentes donde esta la incidencia a solucionar.
 
-## R6 - Cerrar ticket
+### R6 - Cerrar ticket
 Un agente puede cerrar un ticket una vez solucionada una incidencia. Si el ticket tenia subtickets estos también se cerraran.
-### Prioridad: Fundamental
-### Dependencias: R1, R4
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4
+#### Justificación
 Permite tanto a los usuarios como a los agentes que incidencias han sido resueltas. 
 
-## R7 - Consultar tickets propios
+### R7 - Consultar tickets propios
 Un usuario podrá ver todos los tickets que ha creado.
-### Prioridad: Fundamental
-### Dependencias: R1, R4, R5
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4, R5
 
-## R8 - Mapa de tickets
+### R8 - Mapa de tickets
 Un agente podrá ver las incidencias en un mapa segun la ubicación de esta.
-### Prioridad: Opcional
-### Dependencias: R1, R4
-### Justificación
+#### Prioridad: Opcional
+#### Dependencias: R1, R4
+#### Justificación
 Permite ver a los agentes donde hay mayor número de incidencias.
 
-## R9 - Consultar ticket
+### R9 - Consultar ticket
 Un agente podrá ver los detalles de un ticket.
-### Prioridad: Fundamental
-### Dependencias: R1, R4
-### Justificación
+#### Prioridad: Fundamental
+#### Dependencias: R1, R4
+#### Justificación
 Permite al agente ver toda la información necesaria de una incidencia para poder reportarla y solucionarla.
 
-## R10 - Detalles de la cuenta
+### R10 - Detalles de la cuenta
 Un usuario podrá consultar y modificar los detalles de su cuenta.
-### Prioridad: Deseable
-### Dependencias: R1, R4
-### Justificación
+#### Prioridad: Deseable
+#### Dependencias: R1, R4
+#### Justificación
 Permitir a un usuario modificar detalles como su dirección de correo y nombre de usuario.
 
-## R11 - Cerrar cuenta
+### R11 - Cerrar cuenta
 Un usuario podrá cerrar su cuenta. Los tickets creados por este usuario permanecerán en el sistema.
-### Prioridad: Deseable
-### Dependencias: R1, R4, R7
+#### Prioridad: Deseable
+#### Dependencias: R1, R4, R7
 
-## R12 - Protocolo del servidor
+### R12 - Protocolo del servidor
 La web será servida mediante HTTPS.
-### Prioridad: Deseable
-### Justificación
+#### Prioridad: Deseable
+#### Justificación
 El HTTPS garantiza la encriptacion de los datos y permite usar herramientas como la geolocalización en el navegador.
 
-## R13 - LOPD y GDPR
+### R13 - LOPD y GDPR
 La información de los usuarios estará custodiada de acuerdo a la LOPD y GDPR. Los menores de 14 años no podrán usar la plataforma.
-### Prioridad: Fundamental
+#### Prioridad: Fundamental
 
 ### 4.1 Precedencia y prioridad
 Esta sección está compuesta por una tabla que resumirá todos los requisitos especificados en las secciones siguientes. Se debe detallar un ID único, un nombre de requisito, su descripción, la prioridad de ese requisitos (es algo **Fundamental** a desarrollar; es **Deseable** tenerlo para que el cliente esté satisfecho; o es algo **Opcional** que estaría bien desarrollar si el tiempo lo permite), su precedencia (requisitos que deberán ser implementados antes) y el tipo (funcional o no funcional).
@@ -280,69 +280,36 @@ Esta tabla se generará en paralelo a las secciones correspondientes, y se compl
 
 
 ### 4.2 Funcionales
-Esta sección especifica los requisitos funcionales de sistema que el futuro software debe tener en su entorno. Se aconseja poner un enlace al documento de casos de uso generado por magic draw para que el lector tenga una vista general de las funcionalidades del producto a generar.
-
-
+[Casos de uso](https://github.com/rubenjr0/SRS-Template/blob/master/CasosDeUso.pdf).
 
 ### 4.3 Calidad de Servicio
-Esta sección establece requisitos no funcionales relacionados con la calidad que deben presentar las funcionales del software.
- 
-#### 4.3.1 Rendimiento
-Si existen requisitos no funcionales de rendimiento para el producto en varias circunstancias, indíquelos aquí y explique sus razones, para ayudar a los desarrolladores a comprender la intención y tomar las decisiones de diseño adecuadas. Especifique las restricciones de tiempo. Haga tales requisitos tan específicos como sea posible. Es posible que deba indicar los requisitos de rendimiento para requisitos funcionales o características individuales.
+#### R1: Es necesaria una conexión a internet para usar la plataforma.
+#### R2: Es necesario un navegador con las funciones especificadas para utilizar la plataforma.
+#### R5.1, R5.2, R5.3: Con estas especificaciones se busca reducir el tamaño de los tickets para poder almacenar más.
+#### R5.4: La ubicación del ticket permite localizar las incidencias.
 
-#### 4.3.2 Seguridad
-Especifique los requisitos no funcionales relacionados con los problemas de seguridad o privacidad relacionados con el uso del producto. 
-* Protección de los datos utilizados o creados por el producto.
-* Requisitos de autenticación de identidad de usuario. 
-* Políticas o regulaciones externas que contengan problemas de seguridad que afecten al producto. 
-* Certificaciones de seguridad o privacidad que deben cumplirse.
+#### 4.3.1 Seguridad
+#### R12: El HTTPS es más seguro que el HTTP y permite usar geolocalización en el navegador.
+#### R13: El cumplimiento de estas normas es necesario para que la plataforma sea usable.
 
-#### 4.3.3 Fiabilidad
-Especifique los requisitos no funcionales necesarios para establecer la fiabilidad requerida del sistema de software al momento de la entrega.
+#### 4.3.2Fiabilidad
+#### R13: El cumplimiento de estas normas es necesario para que la plataforma sea usable.
 
-#### 4.3.4 Disponibilidad
-Especifique los requisitos no funcionales necesarios para garantizar un nivel de disponibilidad definido para todo el sistema, tiempo mínimo disponible por día, máximos de reinicios permitidos por tiempo, etc.
-
-### 4.4 Normativas aplicables
-Especifique los requisitos no funcionales derivados de las normas o regulaciones existentes, que incluyen:
-* Formato de informe
-* Nombre de datos
-* Procedimientos contables
-* Seguimiento de auditoría
-
-### 4.5 Diseño e implementación
-
-#### 4.5.1 Instalación
-Restricciones para garantizar que el futuro software se ejecutará sin problemas en la plataforma de implementación de destino.
-
-#### 4.5.2 Distribución
-Restricciones en los componentes de software para adaptarse a la estructura distribuida geográficamente de la organización en la que se va a instalar el software, la distribución de datos a procesar o la distribución de dispositivos a controlar.
-
-#### 4.5.3 Mantenimiento
-Especifique los atributos del software que se relacionan con la facilidad de mantenimiento del software en sí. Estos pueden incluir requisitos para cierta modularidad, interfaces o limitación de complejidad. Los requisitos no se deben colocar aquí solo porque son buenas prácticas de diseño.
+### 4.4 Diseño e implementación
 
 #### 4.5.4 Reusabilidad
-Software externo que deberá usarse.
+Firebase de Google para la base de datos, almacenamiento y gestión de cuentas.
 
 #### 4.5.5 Portabilidad
-Especifique los atributos del software que se relacionan con la facilidad de portar el software a otras máquinas host y / o sistemas operativos.
+NodeJS corre tanto en sistemas de tipo UNIX (Linux y MacOS) como en Windows, por lo que el backend funcionará en cualquier equipo con estos sistemas operativos siempre que tenga NodeJS y NPM instalado.
 
-#### 4.5.6 Coste
-Especifique las limitaciones en el costo del producto de software.
+Los usuarios y agentes podrán acceder a la plataforma desde sus dispositivos móviles y ordenadores.
 
-#### 4.5.7 Fecha de entrega
-Especifique, si tiene, fecha de entrega del producto.
+#### 4.5.6 Fecha de entrega
+5 de Junio de 2020
 
 ## 5. Verificación
-Esta sección proporciona los enfoques y métodos de verificación planeados para calificar el software. Se recomienda que los elementos de información para verificación se proporcionen de manera paralela con los elementos de requisitos en la Sección 4. El propósito del proceso de verificación es proporcionar evidencia objetiva de que un sistema o elemento del sistema cumple con los requisitos y características especificados.
-
-
-## 6. Apendices
-### Apéndice A: Ejemplos de este documento relleno
-Incluir y referenciar en el documento tantos apéndices como sea necesario. Los siguientes, son ejemplo de este documento (con algunas modificaciones), relleno:
-
-[Ejemplo relleno en inglés 1](https://arxiv.org/pdf/1005.0330.pdf)
-[Ejemplo relleno en inglés 2](http://www.cse.chalmers.se/~feldt/courses/reqeng/examples/srs_example_2010_group2.pdf)
+Se utilizarán librerias de testing para javascript para verificar el backend, además de herramientas como Postman e Insomnia para comprobar que los datos servidos por el servidor son correctos.
 
 ### Apéndice B: Generar PDF usando un fichero MD
 Hay multitud de herramientas online y offline, por ejemplo: https://www.markdowntopdf.com/

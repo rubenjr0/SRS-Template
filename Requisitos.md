@@ -46,7 +46,7 @@ Clean Up
 |      |         |                     |           |
 
 ## 1. Introducción
-En este documento se discutiran los requisitos de la plataforma de Clean Up.
+En este documento se discutirán los requisitos de la plataforma de Clean Up.
 
 ### 1.1 Objetivo del documento
 El objetivo de este documento es que los requisitos y funcionalidad objetivo de la plataforma queden bien especificados.
@@ -54,13 +54,13 @@ El público objetivo de este documento es el cliente y los desarrolladores.
 
 ### 1.2 Ámbito del proyecto
 El producto discutido en este documento es la plataforma Clean Up, version 0.1.
-La plataforma permite a los usuarios crear tickets de incidencias en la via pública, para que posteriormente un agente revise dichos tickets y los cierre cuando la incidencia sea solucionada.
+La plataforma permite a los usuarios crear tickets de incidencias en la vía pública, para que posteriormente un agente revise dichos tickets y los cierre cuando la incidencia sea solucionada.
 Esta plataforma ayuda a que que los ciudadanos colaboren en mantener el buen estado de la vía pública.
-El software puede ser comercializado con un modelo de suscripción para las instituciones que lo implementen, mientras que los usuarios no deberan pagar por usar la plataforma.
+El software puede ser comercializado con un modelo de suscripción para las instituciones que lo implementen, mientras que los usuarios no deberán pagar por usar la plataforma.
 
 ### 1.3 Definiciones, acrónimos y abreviaturas
 - Usuario: Ciudadano que usa la plataforma.
-- Agente: Entidad que revisa, notifica al organo competente y cierra las incidencias.
+- Agente: Entidad que revisa, notifica al órgano competente y cierra las incidencias.
 - Clientes: Terminales que usan los usuarios y agentes para interactuar con el sistema.
 - Plataforma: El sistema comprendido por servidor, base de datos y clientes.
 - LOPD: Ley Orgánica de Protección de Datos.
@@ -72,12 +72,12 @@ Describa lo que contiene el resto del documento y cómo está organizado. Depend
 ## 2. Vista general del producto
 
 ### 2.1 Perspectiva del producto
-Se trata de una plataforma web nueva compuesta por un servidor que atenderá las peticiones de los usuarios y los agentes, una base de datos que almacenará toda la información necesaria para permitir el correcto funcionamiento de la plataforma, y los clientes que permitiran interactuar y recibir información del servidor.
+Se trata de una plataforma web nueva compuesta por un servidor que atenderá las peticiones de los usuarios y los agentes, una base de datos que almacenará toda la información necesaria para permitir el correcto funcionamiento de la plataforma, y los clientes que permitirán interactuar y recibir información del servidor.
 
 ### 2.2 Funciones del producto
-Los usuarios crearan tickets de incidencias en la via pública. El usuario proporcionara detalles como imagenes que podra tomar con sus dispositivo móvile o subir desde el almacenamiento del dispositivo que este usando, además de una breve descripción de la incidencia y la ubicación de la misma.
-Las incidencias también tendran un ID propio, además de registraran el ID del usuario que la creo, asi como la fecha y hora en la que se creo.
-En caso de que el sistema detecte un posible duplicado por cercania geográfica avisara al usuario. Si el usuario confirma que la incidencia ha sido reportada con anterioridad, su ticket se anexara al principal como subticket.
+Los usuarios crearan tickets de incidencias en la via pública. El usuario proporcionara detalles como imágenes que podra tomar con sus dispositivos móviles o subir desde el almacenamiento del dispositivo que este usando, además de una breve descripción de la incidencia y la ubicación de la misma.
+Las incidencias también tendrán un ID propio, además de registrarán el ID del usuario que la creo, así como la fecha y hora en la que se creó.
+En caso de que el sistema detecte un posible duplicado por cercanía geográfica avisara al usuario. Si el usuario confirma que la incidencia ha sido reportada con anterioridad, su ticket se anexara al principal como subticket.
 Un usuario podra consultar en todo momento el estado de los tickets que ha creado.
 
 Los agentes podrán revisar tickets creados por los usuarios y cerrarlos una vez la incidencia haya sido solucionada.
@@ -86,15 +86,15 @@ Tras haberse solucionado la incidencia reportada, los agentes pueden cerrarla, y
 
 ### 2.3 Restricciones del producto
 La plataforma solo funcionará con conexión a internet, aunque los agentes contaran con un cache para ver tickets offline.
-Los tickets contaran con una descripción con un número fijo de caracteres y 3 imagenes.
+Los tickets contaran con una descripción con un número fijo de caracteres y 3 imágenes.
 La plataforma respetará tanto la LOPD como la GDPR, y por extensión la Cookie Law. Debido a esto, se informará al usuario que al usar la plataforma, está de acuerdo con el uso de cookies en su navegador y con que nuestro servicio almacene sus datos. Además, los usuarios menores de 14 años no podrán utilizar la plataforma.
 
 ### 2.4 Perfiles de usuario
 Los usuarios serán ciudadanos interesados en el buen estado de la infraestructura pública de donde vivan.
-Nuestros usuarios objetivo son especialmente jovenes (con una edad igual o superior a 14 años) y adultos, ya que tienen una mayor fácilidad para aprender a manejar nuevas herramientas tecnológicas.
+Nuestros usuarios objetivos son especialmente jóvenes (con una edad igual o superior a 14 años) y adultos, ya que tienen una mayor fácilidad para aprender a manejar nuevas herramientas tecnológicas.
 
 ### 2.5 Suposiciones y dependencias
-El sistema dependerá de otros sistemas y librerias externos:
+El sistema dependerá de otros sistemas y librerías externos:
 - [NodeJS](https://nodejs.org/es/): Backend hecho en javascript.
 - [NPM](https://www.npmjs.com/): Gestor de paquetes de NodeJS.
 - [Firebase de Google](https://firebase.google.com/): Base de datos nosql, sistema de gestión de usuarios que por correo y/o cuenta de Google, almacenamiento de archivos.
@@ -110,10 +110,10 @@ Después, dependiendo del tipo de usuario (usuario o agente), se mostraran inter
 
 La interfaz para los usuarios permitirá ver los tickets creados en el pasado por el usuario en cuestión o crear un ticket nuevo.
 Al pulsar el botón de crear ticket se mostrará una página con el formulario con los campos necesarios para crear un ticket. Una vez creado el ticket se volverá a la lista de tickets.
-Los usuarios tambien dispondran de una pagina con los detalles de su cuenta donde podran hacer cambios o darse de baja en la plataforma.
+Los usuarios también dispondran de una pagina con los detalles de su cuenta donde podran hacer cambios o darse de baja en la plataforma.
 
 La interfaz para los agentes mostrará un mapa con incidencias, así como estadísticas (número de tickets abiertos).
-El agente podrá abrir un ticket de interes para inspeccionarlo, pudiendo ver las imagenes, descripción y subtickets del mismo, además de poder cerrarlo pulsando un botón.
+El agente podrá abrir un ticket de interes para inspeccionarlo, pudiendo ver las imágenes, descripción y subtickets del mismo, además de poder cerrarlo pulsando un botón.
 
 Una característica importante es que el diseño estará optimizado para ser usado tanto en moviles como en ordenadores. Esto será gracias a un enfoque [Responsive Web Design](https://www.w3schools.com/html/html_responsive.asp) y [Mobile-First Design](https://www.initcoms.com/que-es-mobile-first-posicionamiento/).
 
@@ -246,9 +246,6 @@ La información de los usuarios estará custodiada de acuerdo a la LOPD y GDPR. 
 #### Prioridad: Fundamental
 
 ### 4.1 Precedencia y prioridad
-Esta sección está compuesta por una tabla que resumirá todos los requisitos especificados en las secciones siguientes. Se debe detallar un ID único, un nombre de requisito, su descripción, la prioridad de ese requisitos (es algo **Fundamental** a desarrollar; es **Deseable** tenerlo para que el cliente esté satisfecho; o es algo **Opcional** que estaría bien desarrollar si el tiempo lo permite), su precedencia (requisitos que deberán ser implementados antes) y el tipo (funcional o no funcional).
-
-Esta tabla se generará en paralelo a las secciones correspondientes, y se completará cuando todas las secciones estén terminadas. Os recomiendo hacerla en excel e importarla en https://www.tablesgenerator.com/markdown_tables para generar la tabla en formato Markdown. Meter retornos de carro para que no se alarge mucho la tabla y usad la opción *_line break as <br>_* para que esos retornos de carro sean efectivos al copiarlos.
 
 | Id   | Nombre                      | Descripción                                                                                                                                                                                                                                                                              | Prioridad   | Precedencia    | Tipo         |
 |------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|----------------|--------------|

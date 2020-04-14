@@ -29,19 +29,12 @@ Clean Up
   * 4.1 [Precedencia y prioridad](#41-precedencia-y-prioridad) 
   * 4.2 [Funcionales](#42-funcionales)
   * 4.3 [Calidad de Servicio](#43-calidad-de-servicio)
-    * 4.3.1 [Rendimiento](#431-rendimiento)
-    * 4.3.2 [Seguridad](#432-seguridad)
-    * 4.3.3 [Fiabilidad](#433-fiabilidad)
-    * 4.3.4 [Disponibilidad](#434-disponibilidad)
-  * 4.4 [Normativas aplicables](#44-normativas-aplicables)
-  * 4.5 [Diseño e implementación](#45-diseño-e-implementación)
-    * 4.5.1 [Instalación](#451-instalación)
-    * 4.5.2 [Distribución](#452-distribución)
-    * 4.5.3 [Mantenimiento](#453-mantenimiento)
-    * 4.5.4 [Reusabilidad](#454-reusabilidad)
-    * 4.5.5 [Portabilidad](#455-portabilidad)
-    * 4.5.6 [Coste](#456-coste)
-    * 4.5.7 [Fecha de Entrega](#457-fecha-de-entrega)
+    * 4.3.1 [Seguridad](#431-seguridad)
+    * 4.3.2 [Fiabilidad](#433-fiabilidad)
+  * 4.4 [Diseño e implementación](#44-diseño-e-implementación)
+    * 4.4.1 [Reusabilidad](#441-reusabilidad)
+    * 4.4.2 [Portabilidad](#442-portabilidad)
+    * 4.4.3 [Fecha de Entrega](#443-fecha-de-entrega)
 * 5 [Verificación](#5-verificación)
 * 6 [Apendices](#6-apendices) 
   
@@ -292,20 +285,20 @@ Esta tabla se generará en paralelo a las secciones correspondientes, y se compl
 #### R12: El HTTPS es más seguro que el HTTP y permite usar geolocalización en el navegador.
 #### R13: El cumplimiento de estas normas es necesario para que la plataforma sea usable.
 
-#### 4.3.2Fiabilidad
+#### 4.3.2 Fiabilidad
 #### R13: El cumplimiento de estas normas es necesario para que la plataforma sea usable.
 
 ### 4.4 Diseño e implementación
 
-#### 4.5.4 Reusabilidad
+#### 4.4.1 Reusabilidad
 Firebase de Google para la base de datos, almacenamiento y gestión de cuentas.
 
-#### 4.5.5 Portabilidad
+#### 4.4.2 Portabilidad
 NodeJS corre tanto en sistemas de tipo UNIX (Linux y MacOS) como en Windows, por lo que el backend funcionará en cualquier equipo con estos sistemas operativos siempre que tenga NodeJS y NPM instalado.
 
 Los usuarios y agentes podrán acceder a la plataforma desde sus dispositivos móviles y ordenadores.
 
-#### 4.5.6 Fecha de entrega
+#### 4.4.3 Fecha de entrega
 5 de Junio de 2020
 
 ## 5. Verificación
